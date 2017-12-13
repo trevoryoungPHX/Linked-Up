@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
-import Action from "./Action"
-import Note from "./Note"
-import Meeting from "./Meeting"
+
+import { connect } from 'react-redux';
 
 class ContactCard extends Component {
   render () {
-    console.log("contact card props", this.props);
+    let filteredMeetings = this.props.meetings.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
+    let personalMeetings = filteredMeetings.map((item)=> <li>{item.notes} | DATE: <b>{item.date}</b></li>)
+
+    let filteredActions = this.props.actions.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
+    let personalActions = filteredActions.map((item)=> <li>{item.title} | DUE: <b>{item.due_date}</b></li>)
+
+    let filteredNotes = this.props.notes.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
+    let personalNotes= filteredNotes.map((item)=> <li>{item.description}</li>)
+
     return (
       <div className = "contactCard">
         <div class = "contactCardHeader">
@@ -17,20 +24,34 @@ class ContactCard extends Component {
         </div>
         <br></br>
           <div className = "note">
-            NOTES
+            Notes About {this.props.contacts.first_name}
           </div>
-        <Note />
+          <ul>
+            {personalNotes}
+          </ul>
           <div className = "action">
-            ACTION ITEMS
+            Action Items
           </div>
-        <Action />
+          <ul>
+            {personalActions}
+          </ul>
           <div className = "meeting">
-            MEETING HISTORY
+            Logged Meetings
           </div>
-        <Meeting />
+          <ul>
+            {personalMeetings}
+          </ul>
       </div>
     )
   }
 }
 
-export default ContactCard
+function mapStateToProps(store, thisComponentsProps) {
+  return {
+    meetings: store.meetings,
+    notes: store.notes,
+    actions: store.actions
+  }
+}
+
+export default connect (mapStateToProps, null) (ContactCard)

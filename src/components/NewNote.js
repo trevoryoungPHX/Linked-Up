@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class NewNote extends Component {
   render () {
     return (
-      <div className = "newConnection">
+      <div className = "newNote">
         <button type="button" onClick={this.props.toggleAddNote} id = "closeButton" class="btn btn-danger"><b>X</b></button>
         <form class="form-horizontal">
           <fieldset>

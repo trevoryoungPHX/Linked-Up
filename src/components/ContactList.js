@@ -6,7 +6,9 @@ import {bindActionCreators} from 'redux';
 
 class ContactList extends Component {
   render () {
-    let contactList = this.props.contacts.map((item) => <ContactCard key={item.id} contacts = {item}/>)
+    let filteredContactList = this.props.contacts.filter((item)=>item.user_id == 1);
+    let contactList = filteredContactList.map((item) => <ContactCard key={item.id} contacts={item}/>);
+
     return (
       <div>
         <div>

@@ -1,12 +1,12 @@
 import {
-  GET_CONTACTS_SUCCESS, GET_CONTACTS_PENDING
-} from '../actions/contacts'
+  GET_NOTES_SUCCESS, GET_NOTES_PENDING
+} from '../actions/notes'
 
 export default(state = [], action) => {
   switch(action.type){
-    case GET_CONTACTS_SUCCESS:
+    case GET_NOTES_SUCCESS:
       return [...action.payload.data];
-    case GET_CONTACTS_PENDING:
+    case GET_NOTES_PENDING:
       return state;
     default:
       return state;

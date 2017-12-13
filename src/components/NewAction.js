@@ -25,7 +25,7 @@ class NewAction extends Component {
           <div class="form-group">
             <label class="col-md-4 control-label" id="labelForm" for="due_date">DUE DATE</label>
             <div class="col-md-8">
-            <input id="due_date" name="due_date" value="due_date" type="text" placeholder="MM/DD/YYYY" class="form-control input-md" required="" />
+            <input id="due_date" name="due_date" value="due_date" type="date" placeholder="MM/DD/YYYY" class="form-control input-md" required="" />
             </div>
           </div>
           <div class="form-group">
