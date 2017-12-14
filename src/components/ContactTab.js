@@ -4,7 +4,8 @@ class ContactTab extends Component {
   render () {
     return (
       <div className = "contactTab">
-          {this.props.contacts.first_name} {this.props.contacts.last_name}
+          <div class = "glanceName">{this.props.contacts.first_name} {this.props.contacts.last_name}</div>
+          <div class = "line2"></div>
       </div>
     )
   }

@@ -5,8 +5,10 @@ import Footer from "./Footer"
 class About extends Component {
   render () {
     return (
-      <div class = "aboutPage">
+      <div>
       <HeaderAbout />
+        <div class = "aboutPage">
+        </div>
       <Footer />
       </div>
     )

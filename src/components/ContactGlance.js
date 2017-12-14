@@ -12,7 +12,7 @@ class ContactGlance extends Component {
       <div className = "contactGlance">
         <div className = "actionListHeader2">CONNECTIONS AT A GLANCE
         </div>
-        {contactList2}
+        { contactList2 }
       </div>
     )
   }
