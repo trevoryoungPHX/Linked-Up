@@ -9,8 +9,8 @@ class UserCard extends Component {
       </div>
       <div class = "whitebackground">
           <h1>MICHAEL SCOTT</h1>
-          <h5>Member Since: December, 2005 </h5>
-          <h5>True Connections: 5</h5>
+          <h5>Member Since: December, 2017 </h5>
+          <h5>True Connections: 17</h5>
         </div>
       </div>
 

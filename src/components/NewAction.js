@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { postActions } from '../actions/actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import FaBolt from "react-icons/lib/fa/bolt";
+
 
 class NewAction extends Component {
 
@@ -41,7 +43,7 @@ handleChange = (e) =>{
         <button type="button" id = "closeButton" onClick={this.props.toggleAddAction} class="btn btn-danger"><b>X</b></button>
         <form class="form-horizontal">
           <fieldset>
-          <legend id = "newLegend">NEW ACTION ITEM</legend>
+          <legend id = "newLegend"><FaBolt /> | NEW ACTION ITEM</legend>
           <div class="form-group">
             <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
             <div class="col-md-8">

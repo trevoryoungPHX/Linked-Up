@@ -5,8 +5,8 @@ class ActionTab extends Component {
     console.log("action tab props", this.props);
     return (
       <div className = "actionTab">
-        <b>{this.props.actions.contact_id}</b><br></br>
-        {this.props.actions.title}<br></br>
+        <b>{this.props.actions.first_name} {this.props.actions.last_name}</b><br></br>
+        - {this.props.actions.title} -<br></br>
         DUE: <b>{this.props.actions.due_date}</b>
         <div className = "line"></div>
       </div>

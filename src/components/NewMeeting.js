@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { postMeetings } from '../actions/meetings';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import FaCalendarCheckO from 'react-icons/lib/fa/calendar-check-o'
+
 
 class NewMeeting extends Component {
 
@@ -43,7 +45,7 @@ class NewMeeting extends Component {
         <button type="button" id = "closeButton" onClick={this.props.toggleAddMeeting} class="btn btn-danger"><b>X</b></button>
         <form class="form-horizontal">
           <fieldset>
-          <legend id = "newLegend">NEW MEETING LOG</legend>
+          <legend id = "newLegend"><FaCalendarCheckO /> | NEW MEETING LOG</legend>
           <div class="form-group">
             <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
             <div class="col-md-8">

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { postNotes } from '../actions/notes';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import FaStickyNote from 'react-icons/lib/fa/sticky-note';
+
 
 class NewNote extends Component {
 
@@ -33,7 +35,7 @@ class NewNote extends Component {
         <button type="button" onClick={this.props.toggleAddNote} id = "closeButton" class="btn btn-danger"><b>X</b></button>
         <form class="form-horizontal">
           <fieldset>
-          <legend id = "newLegend">NEW NOTE</legend>
+          <legend id = "newLegend"><FaStickyNote /> | NEW NOTE</legend>
           <div class="form-group">
             <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
             <div class="col-md-8">

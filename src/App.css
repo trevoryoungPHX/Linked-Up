@@ -44,6 +44,8 @@ html {
 .marginFix {
   width: 100%;
   background-color: #353A3F;
+  font-family: 'Open Sans Condensed', sans-serif;
+
 }
 
 #mainNav {
@@ -60,20 +62,17 @@ html {
   margin-top: 25px;
 }
 
-#logInInput {
-  width: 200px;
-}
-
-#passwordInput {
-  width: 200px;
-}
 
 .registerBackground {
-  background: #4b6cb7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url('./registerBackground.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+
 }
 
 .register {
@@ -84,6 +83,11 @@ html {
   margin-right: auto;
   padding: 20px;
   text-align: center;
+  -webkit-box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
+  box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
+  font-family: 'Open Sans Condensed', sans-serif;
+
 }
 
 .logInFooter {
@@ -99,7 +103,9 @@ html {
 }
 
 .registerHeader {
-  font-size: 15px;
+  font-size: 35px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
 }
 
 #navLogo {
@@ -125,42 +131,7 @@ html {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-   -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-     -o-animation: fadein 2s; /* Opera < 12.1 */
-        animation: fadein 2s;
-
-      }
-
-      @keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Firefox < 16 */
-      @-moz-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Safari, Chrome and Opera > 12.1 */
-      @-webkit-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Internet Explorer */
-      @-ms-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Opera < 12.1 */
-      @-o-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
+}
 
 .contactList {
   margin-top: 30px;
@@ -227,6 +198,8 @@ html {
   padding-top: 10px;
   color: white;
   padding-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .actionListHeader {
@@ -269,18 +242,12 @@ html {
 .meeting {
     background-color: #57aed1;
     font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
     color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
     font-size: 20px;
-    width: 50%;
-    margin-top: 20px;
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px;
-    padding-left: 10px;
-    min-width: 170px;
-    margin-bottom: 10px;
-
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 
 .meetingTab {
@@ -290,17 +257,11 @@ html {
 .action {
   background-color: #5C9A4F;
   font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
   font-size: 20px;
-  width: 50%;
-  margin-top: 20px;
-  border-top-right-radius: 300px;
-  border-bottom-right-radius: 300px;
-  margin-bottom: 10px;
 
+  cursor: pointer;
 }
 
 .actionTab {
@@ -565,7 +526,7 @@ html {
   float: left;
   margin-right: 22px;
   margin-left: 18px;
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 30px;
   height: 100px;
   border-radius: 300px;
@@ -595,24 +556,16 @@ html {
   font-weight: bold;
   font-size: 22px;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .note {
   background-color: #e29c46;
   font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: left;
   font-size: 20px;
-  width: 50%;
-  margin-top: 20px;
-  border-top-right-radius: 300px;
-  border-bottom-right-radius: 300px;
-  padding-left: 10px;
-  min-width: 170px;
-  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #contactName{
@@ -668,6 +621,12 @@ html {
   margin-top: 20px;
 }
 
+#closeButtonNote {
+  float: right;
+  margin-top: 20px;
+  background-color: !important #d99e56;
+}
+
 .line {
   background-color: gray;
   height: 1px;
@@ -694,7 +653,7 @@ html {
   text-transform: uppercase;
  line-height: 20px;
   cursor: pointer;
-  color: navy;
+  color: #4894EC;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
  -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
@@ -770,4 +729,149 @@ html {
         from { opacity: 0; }
         to   { opacity: 1; }
 
+}
+
+.headerText {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.headerText:hover {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-style: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+ -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+   -o-animation: fadein 2s; /* Opera < 12.1 */
+      animation: fadein 2s;
+
+    }
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+
+}
+
+#loginNav {
+  margin-bottom: 0px;
+  width: 77%;
+  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blueBackground {
+  width: 77%;
+  background-color: #4496EC;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+#signInButton {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-left: 20px;
+}
+
+.footerText {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-left: 20px;
+  padding-top: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.revealItems {
+  margin-top: 10px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+ -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+   -o-animation: fadein 2s; /* Opera < 12.1 */
+      animation: fadein 2s;
+
+    }
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+}
+
+#centeredOption {
+padding-left: 15px;
+font-size: 25px;
+height: auto;
+width: 300px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0px;
+}
+
+.editContactButton {
+  margin-right: 10px;
+  color: black;
+  background-color: white;
+}
+
+.deleteContactButton {
+  margin-right: 5px;
+  background-color: white;
+  color: red;
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { postContacts } from '../actions/contacts';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import FaUser from 'react-icons/lib/fa/user';
+
 
 class NewConnection extends Component {
 
@@ -51,7 +53,7 @@ handleChange = (e) =>{
         <div class = "center">
         <form class="form-horizontal">
           <fieldset>
-            <legend id = "newLegend">NEW CONNECTION</legend>
+            <legend id = "newLegend"><FaUser /> | NEW CONNECTION</legend>
             <div class="form-group">
               <label class="col-md-4 control-label" id="labelForm" for="first_name">FIRST NAME</label>
               <div class="col-md-8">
