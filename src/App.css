@@ -1,3 +1,9 @@
+.alert {
+  margin-left: 23px;
+  font-size: 30px;
+  text-align: center;
+}
+
 body {
   margin: 0;
   margin-right: 0;
@@ -184,12 +190,15 @@ html {
 .contactCard {
   padding: 20px;
   margin-top: 30px;
-  min-width: 400px;
   background-color: #e0e0e0;
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
   box-shadow: 7px 7px 20px -2px rgba(0,0,0,0.75);
+}
+
+.contactCardInfo {
+  padding-left: 20px;
 }
 
 .contactCardHeader {
@@ -570,6 +579,7 @@ html {
 
 #contactName{
   margin: 0px;
+  font-weight: bold;
 }
 
 .connectionHeader {
@@ -596,10 +606,16 @@ html {
   font-size: 50px;
   margin-bottom: 5;
   margin-left: 10px;
+  border-bottom: none;
+  text-shadow: -2px 2px 2px rgba(150, 150, 150, 1);
 }
 
 #labelForm {
   font-size: 20px;
+}
+
+.linethrough{
+  text-decoration: line-through;
 }
 
 #newSubmitButton {
@@ -817,6 +833,7 @@ html {
 
 .revealItems {
   margin-top: 10px;
+  font-size: 25px;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
  -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
@@ -854,14 +871,14 @@ html {
         to   { opacity: 1; }
 }
 
-#centeredOption {
-padding-left: 15px;
-font-size: 25px;
-height: auto;
-width: 300px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 0px;
+#tion {
+  padding-left: 15px;
+  font-size: 25px;
+  height: auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
 }
 
 .editContactButton {
@@ -874,4 +891,8 @@ margin-bottom: 0px;
   margin-right: 5px;
   background-color: white;
   color: red;
+}
+
+.headerShadow {
+  text-shadow: -2px 2px 2px rgba(150, 150, 150, 1);
 }

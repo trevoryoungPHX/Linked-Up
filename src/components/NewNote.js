@@ -32,27 +32,31 @@ class NewNote extends Component {
 
     return (
       <div className = "newNote">
-        <button type="button" onClick={this.props.toggleAddNote} id = "closeButton" class="btn btn-danger"><b>X</b></button>
-        <form class="form-horizontal">
+        <button type="button" onClick={this.props.toggleAddNote} id = "closeButton" className="btn btn-danger"><b>X</b></button>
+        <form className="form-horizontal">
           <fieldset>
           <legend id = "newLegend"><FaStickyNote /> | NEW NOTE</legend>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
-            <div class="col-md-8">
-              <select id="contact_id" onChange={this.handleChange} name="contact_id" class="form-control">
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
+            <div className="col-md-8">
+              <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control">
                 { contactList }
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="description">DESCRIPTION</label>
-            <div class="col-md-8">
-              <textarea class="form-control" onChange={this.handleChange} id="description" value={this.state.description} name="description"></textarea>
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="description">DESCRIPTION</label>
+            <div className="col-md-8">
+              <textarea className="form-control" onChange={this.handleChange} id="description" value={this.state.description} name="description"></textarea>
             </div>
           </div>
           <button type="button" id="newSubmitButton"  onClick={this.handleAddNote} className="btn btn-secondary">SUBMIT CONNECTION NOTE</button><br></br>
           </fieldset>
           </form>
+          <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Note taken!</strong>
+          </div>
       </div>
     )
   }

@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import HeaderAbout from "./HeaderAbout"
+import Header from "./Header"
 import Footer from "./Footer"
 
-class About extends Component {
+class Edit extends Component {
   render () {
     return (
       <div>
-      <HeaderAbout />
-        <div className = "aboutPage">
+      <Header />
+        <div className = "editPage">
+          TEST EDIT
         </div>
       <Footer />
       </div>
@@ -15,4 +16,4 @@ class About extends Component {
   }
 }
 
-export default About
+export default Edit

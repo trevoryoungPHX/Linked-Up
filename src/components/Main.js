@@ -23,7 +23,7 @@ class Main extends Component {
               <Col xs="4">
                 <div className = "dashboard">
                   <button type="button" id="dashboardButton" onClick={this.props.toggleAddConnection} className="btn btn-secondary"> <FaUser /> | New Connection</button><br></br>
-                  <button type="button" id="dashboardButton" onClick={this.props.toggleAddNote} class="btn btn-warning"><FaStickyNote /> | Add A Note</button>
+                  <button type="button" id="dashboardButton" onClick={this.props.toggleAddNote} className="btn btn-warning"><FaStickyNote /> | Add A Note</button>
                   <button type="button" id="dashboardButton" onClick={this.props.toggleAddAction} className="btn btn-success"><FaBolt /> | New Action Item</button><br></br>
                   <button type="button" id="dashboardButton" onClick={this.props.toggleAddMeeting} className="btn btn-info"><FaCalendarCheckO /> | Log Meeting</button><br></br>
                 </div>
@@ -32,7 +32,6 @@ class Main extends Component {
               </Col>
             </Row>
           </Container>
-
         </div>
       </div>
     )

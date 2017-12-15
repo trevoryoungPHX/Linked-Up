@@ -16,10 +16,10 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to={`/about`}><p class = "headerText">About</p></Link>
+                <Link to={`/about`}><p className = "headerText">About</p></Link>
               </li>
               <li className="nav-item">
-                <Link to={`/Login`}><p class = "headerText">Logout</p></Link>
+                <Link to={`/Login`}><p className = "headerText">Logout</p></Link>
               </li>
             </ul>
           </div>

@@ -3,6 +3,7 @@ import './App.css';
 import LogIn from './components/LogIn';
 import Index from './components/Index';
 import About from "./components/About"
+import Edit from "./components/Edit"
 import { getContacts } from './actions/contacts';
 import { getActions } from './actions/actions';
 import { getMeetings } from './actions/meetings';
@@ -25,16 +26,17 @@ class App extends Component {
     return (
     <Router>
       <Switch>
-      <Route exact path="/home" component={Index}/>
+      <Route path="/home" component={Index}/>
       <Route path ="/about" component={About}/>
       <Route path ="/login" component={LogIn}/>
+      <Route path ="/" component={LogIn}/>
+      <Route exact path ="/edit/:id" component={Edit}/>
       </Switch>
     </Router>
 
     );
   }
 }
-
 
 function mapDispatchToProps(dispatch) {
   return {

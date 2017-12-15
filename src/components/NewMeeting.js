@@ -42,39 +42,43 @@ class NewMeeting extends Component {
 
     return (
       <div className = "newMeeting">
-        <button type="button" id = "closeButton" onClick={this.props.toggleAddMeeting} class="btn btn-danger"><b>X</b></button>
-        <form class="form-horizontal">
+        <button type="button" id = "closeButton" onClick={this.props.toggleAddMeeting} className="btn btn-danger"><b>X</b></button>
+        <form className="form-horizontal">
           <fieldset>
           <legend id = "newLegend"><FaCalendarCheckO /> | NEW MEETING LOG</legend>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
-            <div class="col-md-8">
-              <select id="contact_id" onChange={this.handleChange} name="contact_id" class="form-control">
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
+            <div className="col-md-8">
+              <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control">
                 { contactList }
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="date">MEETING DATE</label>
-            <div class="col-md-8">
-            <input id="date" name="date" onChange={this.handleChange} type="date" value={this.state.date} placeholder="" class="form-control input-md" />
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="date">MEETING DATE</label>
+            <div className="col-md-8">
+            <input id="date" name="date" onChange={this.handleChange} type="date" value={this.state.date} placeholder="" className="form-control input-md" required />
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="type">MEETING TYPE</label>
-            <div class="col-md-8">
-            <input id="type" name="type" onChange={this.handleChange} type="text" value={this.state.type} placeholder="" class="form-control input-md" />
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="type">MEETING TYPE</label>
+            <div className="col-md-8">
+            <input id="type" name="type" onChange={this.handleChange} type="text" value={this.state.type} placeholder="" className="form-control input-md" required />
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="notes">NOTES</label>
-            <div class="col-md-8">
-              <textarea class="form-control" id="notes" name="notes"onChange={this.handleChange}  value={this.state.notes}></textarea>
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="notes">NOTES</label>
+            <div className="col-md-8">
+              <textarea className="form-control" id="notes" required name="notes"onChange={this.handleChange}  value={this.state.notes}></textarea>
             </div>
           </div>
           <button type="button" id="newSubmitButton"  onClick={this.handleAddMeeting} className="btn btn-secondary">LOG MEETING</button>
           </fieldset>
           </form>
+          <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Your meeting has been logged!</strong>
+          </div>
       </div>
     );
   }

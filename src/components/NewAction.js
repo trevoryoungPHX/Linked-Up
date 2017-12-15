@@ -40,48 +40,50 @@ handleChange = (e) =>{
 
     return (
       <div className = "newAction">
-        <button type="button" id = "closeButton" onClick={this.props.toggleAddAction} class="btn btn-danger"><b>X</b></button>
-        <form class="form-horizontal">
+        <button type="button" id = "closeButton" onClick={this.props.toggleAddAction} className="btn btn-danger"><b>X</b></button>
+        <form className="form-horizontal">
           <fieldset>
           <legend id = "newLegend"><FaBolt /> | NEW ACTION ITEM</legend>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
-            <div class="col-md-8">
-              <select id="contact_id" onChange={this.handleChange} name="contact_id" class="form-control">
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
+            <div className="col-md-8">
+              <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control" required>
                 { contactList }
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="title">ACTION TITLE</label>
-            <div class="col-md-8">
-            <input id="title" name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="" class="form-control input-md" />
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="title">ACTION TITLE</label>
+            <div className="col-md-8">
+            <input id="title" name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="" className="form-control input-md" required />
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="due_date">DUE DATE</label>
-            <div class="col-md-8">
-            <input id="due_date" name="due_date" onChange={this.handleChange} value={this.state.due_date} type="date" placeholder="MM/DD/YYYY" class="form-control input-md" required="" />
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="due_date">DUE DATE</label>
+            <div className="col-md-8">
+            <input id="due_date" name="due_date" onChange={this.handleChange} value={this.state.due_date} type="date" placeholder="MM/DD/YYYY" className="form-control input-md" required />
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" id="labelForm" for="is_completed">COMPLETED</label>
-            <div class="col-md-4">
-              <label class="radio-inline" for="is_completed-0">
+          <div className="form-group">
+            <label className="col-md-4 control-label" id="labelForm" for="is_completed">COMPLETED</label>
+            <div className="col-md-4">
+              <label className="radio-inline" for="is_completed-0">
                 <input type="radio" name="is_completed" onChange={this.handleChange} value={this.state.is_completed} id="is_completed-0" value="true" />
                 TRUE
               </label>
-              <label class="radio-inline" for="is_completed-1">
+              <label className="radio-inline" for="is_completed-1">
                 <input type="radio" name="is_completed" onChange={this.handleChange} value={this.state.is_completed}  id="is_completed-1" checked="checked" value="false" />
                 FALSE
               </label>
             </div>
           </div>
           <button type="button" id="newSubmitButton" onClick={this.handleAddAction}  className="btn btn-secondary">New Action Item</button><br></br>
-
           </fieldset>
           </form>
-
+          <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Your action item has been added!</strong>
+          </div>
     </div>
     )
   }

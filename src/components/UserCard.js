@@ -7,8 +7,8 @@ class UserCard extends Component {
       <div className = "userCard">
         <img className="userImage" src="http://a.fod4.com/images/user_photos/1203812/357a79e5befe5adefeb1d12050ed95fc_square_fullsize.png"/>
       </div>
-      <div class = "whitebackground">
-          <h1>MICHAEL SCOTT</h1>
+      <div className = "whitebackground">
+          <h1 class="headerShadow">MICHAEL SCOTT</h1>
           <h5>Member Since: December, 2017 </h5>
           <h5>True Connections: 17</h5>
         </div>

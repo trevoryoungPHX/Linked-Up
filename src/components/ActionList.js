@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 class ActionList extends Component {
   render () {
-    let actionList = this.props.actions.map((item) => <ActionTab key={item.id} actions = {item}/>)
+    let actionList = this.props.actions.map((item) => item.is_completed? '' : <ActionTab key={item.id} actions = {item}/>)
     return (
       <div className = "actionList">
         <div className = "actionListHeader">UPCOMING ACTIONS
