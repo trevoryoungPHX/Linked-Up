@@ -29,23 +29,24 @@ class ContactCard extends Component {
   }
 
   handleOnCompletedAction = (e) =>{
-
+    console.log(e.target.id)
     this.props.updateActions(e.target.id)
   }
 
   handleDelete = (e) => {
-    console.log(e.target.id)
     this.props.deleteContacts(e.target.id)
   }
 
 
   render () {
-    console.log(this.props.contacts.id)
     let filteredMeetings = this.props.meetings.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
     let personalMeetings = filteredMeetings.map((item)=> <li>{item.notes} | DATE: <b>{item.date}</b></li>)
 
     let filteredActions = this.props.actions.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
-    let personalActions = filteredActions.map((item)=> <li className={item.is_completed? 'linethrough': ' '}>{item.title} | DUE: <b>{item.due_date}</b> <button id={`${item.id}`} onClick={this.handleOnCompletedAction}>Complete!</button></li>)
+    let personalActions = filteredActions.map((item)=> {
+      console.log("UNICORNS: ", item)
+      return (<li className={item.is_completed? 'linethrough': ''}>{item.title} | DUE: <b>{item.due_date}</b> <button id={`${item.id}`} onClick={this.handleOnCompletedAction}>Complete!</button></li>)
+    })
 
     let filteredNotes = this.props.notes.filter((item) => item.contact_id == this.props.contacts.id && item.user_id == 1)
     let personalNotes= filteredNotes.map((item)=> <li>{item.description}</li>)
@@ -60,7 +61,6 @@ class ContactCard extends Component {
               <h4>{this.props.contacts.profession} at {this.props.contacts.company}</h4>
               <h5>Email | {this.props.contacts.email}</h5>
               <h5>Phone | {this.props.contacts.phone}</h5>
-              <Link to={`/edit/${this.props.contacts.id}`}><p>Edit</p></Link>
               <button type="button" data-toggle="modal" data-target="#exampleModal" className="deleteContactButton">Delete</button>
           </div>
           </div>

@@ -47,7 +47,8 @@ handleChange = (e) =>{
           <div className="form-group">
             <label className="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
             <div className="col-md-8">
-              <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control" required>
+              <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control" >
+                <option disabled selected >Select Contact</option>
                 { contactList }
               </select>
             </div>
@@ -55,13 +56,13 @@ handleChange = (e) =>{
           <div className="form-group">
             <label className="col-md-4 control-label" id="labelForm" for="title">ACTION TITLE</label>
             <div className="col-md-8">
-            <input id="title" name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="" className="form-control input-md" required />
+            <input id="title" name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="" className="form-control input-md"  />
             </div>
           </div>
           <div className="form-group">
             <label className="col-md-4 control-label" id="labelForm" for="due_date">DUE DATE</label>
             <div className="col-md-8">
-            <input id="due_date" name="due_date" onChange={this.handleChange} value={this.state.due_date} type="date" placeholder="MM/DD/YYYY" className="form-control input-md" required />
+            <input id="due_date" name="due_date" onChange={this.handleChange} value={this.state.due_date} type="date" placeholder="MM/DD/YYYY" className="form-control input-md"  />
             </div>
           </div>
           <div className="form-group">
@@ -80,10 +81,6 @@ handleChange = (e) =>{
           <button type="button" id="newSubmitButton" onClick={this.handleAddAction}  className="btn btn-secondary">New Action Item</button><br></br>
           </fieldset>
           </form>
-          <div class="alert alert-dismissible alert-success">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Your action item has been added!</strong>
-          </div>
     </div>
     )
   }

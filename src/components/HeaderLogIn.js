@@ -14,9 +14,6 @@ class HeaderLogIn extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarColor01">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={`/about`}><p className = "headerText">About</p></Link>
-            </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="email" placeholder="Email" />

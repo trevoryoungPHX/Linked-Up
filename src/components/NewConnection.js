@@ -100,10 +100,6 @@ handleChange = (e) =>{
           </fieldset>
         </form>
     </div>
-    <div class="alert alert-dismissible alert-info">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Well done! You have a new contact in your connections list.</strong>
-    </div>
   </div>
     )
   }

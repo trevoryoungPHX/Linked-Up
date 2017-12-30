@@ -50,6 +50,7 @@ class NewMeeting extends Component {
             <label className="col-md-4 control-label" id="labelForm" for="contact_id">CONNECTION</label>
             <div className="col-md-8">
               <select id="contact_id" onChange={this.handleChange} name="contact_id" className="form-control">
+                <option disabled selected >Select Contact</option>
                 { contactList }
               </select>
             </div>
@@ -75,10 +76,6 @@ class NewMeeting extends Component {
           <button type="button" id="newSubmitButton"  onClick={this.handleAddMeeting} className="btn btn-secondary">LOG MEETING</button>
           </fieldset>
           </form>
-          <div class="alert alert-dismissible alert-info">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Your meeting has been logged!</strong>
-          </div>
       </div>
     );
   }
