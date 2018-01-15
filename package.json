@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "8.9.4": "^1.0.5",
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
     "bootswatch": "^4.0.0-beta.2",
