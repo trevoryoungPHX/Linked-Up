@@ -10,7 +10,6 @@ class UserCard extends Component {
       <div className = "whitebackground">
           <h1 class="headerShadow">MICHAEL SCOTT</h1>
           <h5>Member Since: December, 2017 </h5>
-          <h5>True Connections: 17</h5>
         </div>
       </div>
 

@@ -11,7 +11,7 @@ export const DELETE_CONTACTS_SUCCESS = 'DELETE_CONTACTS_SUCCESS'
 export const getContacts = () =>{
   return async (dispatch) => {
     dispatch({type: GET_CONTACTS_PENDING})
-      let contacts = await axios.get(`http://localhost:8000/contacts`)
+      let contacts = await axios.get(`https://linked-up-backend.herokuapp.com/contacts`)
     dispatch({
       type: GET_CONTACTS_SUCCESS,
       payload: contacts
@@ -22,7 +22,7 @@ export const getContacts = () =>{
 export const postContacts = (newContact) =>{
   return async (dispatch) => {
     dispatch({type: POST_CONTACTS_PENDING})
-      let contacts = await axios.post(`http://localhost:8000/contacts`, newContact)
+      let contacts = await axios.post(`https://linked-up-backend.herokuapp.com/contacts`, newContact)
     dispatch({
       type: POST_CONTACTS_SUCCESS,
       payload: contacts
@@ -33,7 +33,7 @@ export const postContacts = (newContact) =>{
 export const deleteContacts = (id) =>{
   return async (dispatch) => {
     dispatch({type: DELETE_CONTACTS_PENDING})
-      let contacts = await axios.delete(`http://localhost:8000/contacts/delete/${id}`)
+      let contacts = await axios.delete(`https://linked-up-backend.herokuapp.com/contacts/delete/${id}`)
     dispatch({
       type: DELETE_CONTACTS_SUCCESS,
       payload: contacts

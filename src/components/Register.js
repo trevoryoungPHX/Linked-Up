@@ -27,7 +27,7 @@ class Register extends Component {
             <input type="password" className="form-control" id="exampleInputPassword1"  placeholder="Password"/>
           </div>
           <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small><br></br>
-          <Link to={'/about'}><button type="button" className="btn btn-primary">Get Started</button></Link>
+          <Link to={'/'}><button type="button" className="btn btn-primary">Get Started</button></Link>
         </form>
       </div>
     </div>
